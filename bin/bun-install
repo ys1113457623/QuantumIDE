@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+require 'pathname'
+
+$stdout.sync = true
+
+ROOT_PATH = File.expand_path("../", __dir__)
+FRONTEND_PATH = File.join(ROOT_PATH, 'frontend')
+
+ROOT_PATHNAME = Pathname.new(ROOT_PATH)
+
+puts "============================================================="
+puts "Installing node modules in frontend"
+puts "============================================================="
+
+puts "FRONTEND_PATH", FRONTEND_PATH
+Dir.chdir(FRONTEND_PATH) do
+  system "npm install"
+end
+
+puts "============================================================="
+puts "Installed node modules in frontend"
+puts "============================================================="
+
+system "yarn run prepare"

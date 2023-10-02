@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "vite": "^4.4.9",
+    "vite-plugin-ruby": "^3.2.2",
+    "million": "^2.6.2",
+    "husky": "^8.0.0"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  }
+}
