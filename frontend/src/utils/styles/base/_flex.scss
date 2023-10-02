@@ -1,6 +1,5 @@
-@mixin flex-row {
-  display: flex;
-  flex-direction: row;
+@mixin flex-fill {
+  flex: 1 0 0;
 }
 
 @mixin flex-col {
@@ -8,14 +7,90 @@
   flex-direction: column;
 }
 
-@mixin flex-r-c {
-  @include flex-col;
-
-  flex-direction: column-reverse;
+@mixin flex-row {
+  display: flex;
 }
 
-@mixin flex-r-r {
+@mixin flex-r {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-row-reverse {
   @include flex-row;
 
   flex-direction: row-reverse;
+}
+
+@mixin justify-c {
+  justify-content: center;
+}
+
+@mixin justify-s-a {
+  justify-content: space-around;
+}
+
+@mixin justify-s-b {
+  justify-content: space-between;
+}
+
+@mixin justify-s-e {
+  justify-content: space-evenly;
+}
+
+@mixin align-c {
+  align-items: center;
+}
+
+@mixin flex-c {
+  @include align-c;
+  @include justify-c;
+}
+
+@mixin flex-row-c {
+  @include flex-r;
+  @include align-c;
+  @include justify-c;
+}
+
+@mixin flex-col-c {
+  @include flex-col;
+  @include align-c;
+  @include justify-c;
+}
+
+@mixin flex-row-x-c {
+  @include flex-r;
+  @include justify-c;
+}
+
+@mixin flex-row-y-c {
+  @include flex-r;
+  @include align-c;
+}
+
+@mixin flex-col-x-c {
+  @include flex-col;
+  @include align-c;
+}
+
+@mixin flex-col-y-c {
+  @include flex-col;
+  @include justify-c;
+}
+
+@mixin flex-eq-row {
+  @include flex-row;
+
+  & > div {
+    @include flex-fill;
+  }
+}
+
+@mixin flex-eq-col {
+  @include flex-col;
+
+  & > div {
+    @include flex-fill;
+  }
 }
