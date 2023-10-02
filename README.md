@@ -11,6 +11,18 @@ This project offers an intuitive and feature-rich online IDE designed to simplif
 2. [Contributing](#contributing)
 3. [License](#license)
 
+
+## Tech Stack
+
+The project is built using a mix of robust and modern technologies to provide an efficient and seamless experience:
+
+- **Frontend:** React [18.2.0]
+- **Backend:** Ruby on Rails [7.0.8]
+- **Build Tool:** Vite[4.4.5]
+
+---
+
+This section helps potential contributors and users quickly understand the technologies that power your online IDE. Feel free to expand on this with additional tools, libraries, or frameworks you may be using.
 ## Installation
 
 Provide detailed installation steps. This can also include software dependencies that must be installed prior to building or running your project.
