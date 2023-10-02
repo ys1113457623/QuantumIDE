@@ -1,24 +1,15 @@
-Creating a compelling README.md file is an excellent way to introduce your GitHub project to the community and prospective users or contributors. Here's a sample structure and some content ideas you might consider for your README.md, tailored to your online IDE project using React, Ruby on Rails, and Vite.
-
----
-
-# Project Title (Your IDE's name)
+# Quantum IDE
 
 ## Description
 
-Write a short, 2-3 sentence description of your project. Briefly state what it does and what tech stack it uses.
+This project offers an intuitive and feature-rich online IDE designed to simplify and accelerate the development workflow. One of its standout features is a seamless one-click deploy function, enabling developers to go from coding to deployment in an instant. Built on a robust tech stack featuring React for the frontend and Ruby on Rails for the backend, the IDE utilizes Vite to offer a blazing-fast development experience.
 
-Example:
-
-This project provides an initial setup for an online IDE designed to streamline web development. Built with React for the frontend and Ruby on Rails for the backend, it leverages Vite for a superior development experience.
 
 ## Table of Contents
 
 1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Features](#features)
-4. [Contributing](#contributing)
-5. [License](#license)
+2. [Contributing](#contributing)
+3. [License](#license)
 
 ## Installation
 
@@ -27,28 +18,11 @@ Provide detailed installation steps. This can also include software dependencies
 Example:
 
 ```bash
-git clone https://github.com/your-username/project-name.git
-cd project-name
-yarn install # or npm install
-bundle install
-# further instructions
+git clone https://github.com/ys1113457623/QuantumIDE.git
+cd QuantumIDE
+docker-compose build
+docker-compose up
 ```
-
-## Usage
-
-Describe how to use your project. Screenshots, code snippets, and examples can be useful here.
-
-```bash
-# How to run the project
-yarn dev # for Vite
-rails s # to start the Ruby on Rails server
-```
-
-## Features
-
-- Feature 1
-- Feature 2
-- Feature 3
 
 ## Contributing
 
