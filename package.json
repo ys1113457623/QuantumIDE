@@ -2,8 +2,11 @@
   "devDependencies": {
     "vite": "^4.4.9",
     "vite-plugin-ruby": "^3.2.2",
+    "@vitejs/plugin-react": "^4.1.0",
     "million": "^2.6.2",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "path": "^0.12.7",
+    "@types/node": "^20.8.2"
   },
   "scripts": {
     "prepare": "husky install"
