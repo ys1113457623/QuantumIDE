@@ -1,0 +1,35 @@
+$btn-default-background-hover: rgba(1, 1, 1, 0.1);
+$btn-default-background-active: rgba(1, 1, 1, 0.2);
+
+.pushZone {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  cursor: pointer;
+
+  &:hover {
+    background: $btn-default-background-hover;
+  }
+
+  &:active {
+    background: $btn-default-background-active;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+    filter: grayscale(0.5);
+
+    &.btn-tooltip {
+      pointer-events: unset;
+    }
+  }
+
+  &.no-highlight {
+    &:hover,
+    &:active {
+      background: transparent;
+    }
+  }
+}
