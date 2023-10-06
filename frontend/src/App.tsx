@@ -1,9 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { Navbar } from './components'
+import { Navbar } from '@components';
 import './App.css'
 
 const Home = () => <h1>Home</h1>;

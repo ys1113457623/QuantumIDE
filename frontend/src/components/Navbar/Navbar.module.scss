@@ -1,0 +1,14 @@
+.navBar {
+    @include flex-row;
+    @include justify-s-b;
+
+    padding: 1rem 2rem;
+    background-color: black;
+}
+
+.linkContainer {
+    @include flex-row;
+    @include justify-s-e;
+
+    width: 60%;
+}

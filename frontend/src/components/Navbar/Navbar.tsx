@@ -3,6 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { variants, sizes } from "./utils";
 
+import styles from './Navbar.module.scss';
+
 type NavbarLink = { label: string; path: string };
 
 export type NavbarProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -20,20 +22,26 @@ export const Navbar = React.forwardRef<HTMLButtonElement, NavbarProps>(
       <nav
         ref={ref}
         className={classNames(
-          "flex justify-center items-center border border-gray-300 disabled:opacity-70 disabled:cursor-not-allowed rounded-md shadow-sm font-medium focus:outline-none hover:opacity-80",
+          styles.navBar,
           variants[variant],
           sizes[size],
           className
         )}
         {...props}
       >
-        <ul className="flex space-x-4">
-          {links.map((link, index) => (
-            <li key={index}>
-              <Link to={link.path}>{link.label}</Link>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.leftSide}>
+          Left
+        </div>
+        <div className={styles.linkContainer}>
+          {
+            links.map((link) => (
+              <Link to={link?.path}>{link.label}</Link>
+            ))
+          }
+        </div>
+        <div className={styles.rightSide}>
+          Right
+        </div>
       </nav>
     );
   }

@@ -8,9 +8,23 @@ export default defineConfig({
     RubyPlugin(),
     react()
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/src/utils/styles/base.scss";`,
+      }
+    }
+  },
   resolve: {
     alias: {
-      '@': path.resolve('./frontend'), // adjust this path as needed
+      '@': path.resolve('./frontend'),  // Root
+      '$': path.resolve('./frontend/src/asset'),
+      '@components': path.resolve('./frontend/src/components'),
+      '%config': path.resolve('./frontend/src/config'),
+      '&features': path.resolve('./frontend/src/features'),
+      '*hooks': path.resolve('./frontend/src/hooks'),
+      '+stores': path.resolve('./frontend/src/stores'),
+      '!utils': path.resolve('./frontend/src/utils'), 
     },
   },
   envDir: path.resolve(__dirname, 'frontend', 'src')
