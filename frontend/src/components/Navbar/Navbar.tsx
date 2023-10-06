@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { variants, sizes } from "./utils";
 
-import styles from './Navbar.module.scss';
+import styles from "./Navbar.module.scss";
 
 type NavbarLink = { label: string; path: string };
 
@@ -11,11 +11,19 @@ export type NavbarProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   links?: NavbarLink[];
   variant?: keyof typeof variants;
   size?: keyof typeof sizes;
+  leftComponent?: React.ReactNode;
 };
 
 export const Navbar = React.forwardRef<HTMLButtonElement, NavbarProps>(
   (
-    { className = "", variant = "primary", size = "md", links = [], ...props },
+    {
+      className = "",
+      variant = "primary",
+      size = "md",
+      links = [],
+      leftComponent,
+      ...props
+    },
     ref
   ) => {
     return (
@@ -29,19 +37,13 @@ export const Navbar = React.forwardRef<HTMLButtonElement, NavbarProps>(
         )}
         {...props}
       >
-        <div className={styles.leftSide}>
-          Left
-        </div>
+        <div className={styles.leftSide}>{leftComponent}</div>
         <div className={styles.linkContainer}>
-          {
-            links.map((link) => (
-              <Link to={link?.path}>{link.label}</Link>
-            ))
-          }
+          {links.map((link) => (
+            <Link to={link?.path}>{link.label}</Link>
+          ))}
         </div>
-        <div className={styles.rightSide}>
-          Right
-        </div>
+        <div className={styles.rightSide}>Right</div>
       </nav>
     );
   }

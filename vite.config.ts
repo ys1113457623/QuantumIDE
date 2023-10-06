@@ -18,7 +18,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve('./frontend'),  // Root
-      '$': path.resolve('./frontend/src/asset'),
+      '@assets': path.resolve('./frontend/src/assets'),
       '@components': path.resolve('./frontend/src/components'),
       '%config': path.resolve('./frontend/src/config'),
       '&features': path.resolve('./frontend/src/features'),

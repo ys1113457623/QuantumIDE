@@ -1,6 +1,7 @@
 .navBar {
     @include flex-row;
     @include justify-s-b;
+    @include align-c;
 
     padding: 1rem 2rem;
     background-color: black;
