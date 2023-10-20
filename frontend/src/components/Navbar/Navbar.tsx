@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { variants, sizes } from "./utils";
 
 import styles from "./Navbar.module.scss";
@@ -40,7 +40,17 @@ export const Navbar = React.forwardRef<HTMLButtonElement, NavbarProps>(
         <div className={styles.leftSide}>{leftComponent}</div>
         <div className={styles.linkContainer}>
           {links.map((link) => (
-            <Link to={link?.path}>{link.label}</Link>
+            <NavLink
+              className={({ isActive }) =>
+                [
+                  styles.navLink,
+                  isActive ? styles.active: "",
+                ].join(" ")
+              }
+              to={link?.path}
+            >
+              {link.label}
+            </NavLink>
           ))}
         </div>
         <div className={styles.rightSide}>Right</div>

@@ -1,15 +1,25 @@
 .navBar {
-    @include flex-row;
-    @include justify-s-b;
-    @include align-c;
+  @include flex-row;
+  @include justify-s-b;
+  @include align-c;
 
-    padding: 1rem 2rem;
-    background-color: black;
+  padding: 1rem 2rem;
+  background-color: black;
 }
 
 .linkContainer {
-    @include flex-row;
-    @include justify-s-e;
+  @include flex-row;
+  @include justify-s-e;
 
-    width: 60%;
+  width: 60%;
+}
+
+.navLink {
+  font-size: $h6-size;
+  color: grey;
+  text-decoration: unset;
+
+  &.active {
+    color: white;
+  }
 }
